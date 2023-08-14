@@ -1,2 +1,7 @@
 # sistema-banco-horas
-Sistema que gerencia o banco de horas dos colaboradores
+Client-side que gerencia o banco de horas dos colaboradores. Usa as seguintes tecnologias:
+ - HTML
+ - JavaScript
+ - CSS
+ - Bootstrap
+ - JQuery
