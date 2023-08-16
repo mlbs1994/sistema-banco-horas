@@ -1,0 +1,72 @@
+<div class="table-marc">
+    <div class="table-title">
+        <h4 class="h4">Marcações</h4>
+        <button id="addMarcacaoButton" class="btn btn-info modalButton add-marc" data-toggle="modal"
+            data-target="#formMarcacaoModal">Adicionar</button>
+    </div>
+    <div class="funcionario-marc-grid">
+        <label for="funcionarios">Funcionario</label>
+        <select id="funcionarios" name="funcionarios" class="select2 custom-select" data-live-search="true">
+            <option value="Osvaldo Lima">Osvaldo Lima</option>
+            <option value="Ana Gusmão">Ana Gusmão</option>
+            <option value="Cintia Lopes">Cintia Lopes</option>
+            <option value="Ricardo Roberto">Ricardo Roberto</option>
+        </select>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Horário Inicio</th>
+                <th scope="col">Horário Fim</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Osvaldo Lima</td>
+                <td>08:00</td>
+                <td>17:00</td>
+                <td>
+                    <a class="modalButton edit-marc" href="#" data-target="#formMarcacaoModal"><span
+                            class="material-icons edit">edit</span></a>
+                    <a class="modalButton del-marc" href="#" data-target="#exclusaoModal"><span
+                            class="material-icons delete">delete</span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>Ana Gusmão</td>
+                <td>08:00</td>
+                <td>17:00</td>
+                <td>
+                    <a class="modalButton edit-marc" href="#" data-target="#formMarcacaoModal"><span
+                            class="material-icons edit">edit</span></a>
+                    <a class="modalButton del-marc" href="#" data-target="#exclusaoModal"><span
+                            class="material-icons delete">delete</span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>Cintia Lopes</td>
+                <td>09:00</td>
+                <td>18:00</td>
+                <td>
+                    <a class="modalButton edit-marc" href="#" data-target="#formMarcacaoModal"><span
+                            class="material-icons edit">edit</span></a>
+                    <a class="modalButton del-marc" href="#" data-target="#exclusaoModal"><span
+                            class="material-icons delete">delete</span></a>
+                </td>
+            </tr>
+            <tr>
+                <td>Ricardo Roberto</td>
+                <td>09:00</td>
+                <td>18:00</td>
+                <td>
+                    <a class="modalButton edit-marc" href="#" data-target="#formMarcacaoModal"><span
+                            class="material-icons edit">edit</span></a>
+                    <a class="modalButton del-marc" href="#" data-target="#exclusaoModal"><span
+                            class="material-icons delete">delete</span></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
