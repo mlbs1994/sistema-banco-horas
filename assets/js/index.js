@@ -18,46 +18,11 @@ const titulosModais = [
 ];
 
 $(document).ready(function() {
-    $('.select2').select2();
 
-    $('.modalButton').click(function(e) {
-        prevenirRolagemPraCima(e); 
-        var targetModal = $(this).data('target');
-        processarTituloModal($(this).get(0), targetModal);
-        $(targetModal).modal('show');
-    });
-
-    $('.closeModalButton').click(function(e) {
-        prevenirRolagemPraCima(e);
-        $('.modal').modal('hide');
-    });
-
-    $('.hr').on('input', function() {
-        var value = $(this).val();
-        if (value.length === 2 && value.indexOf(':') === -1) {
-          $(this).val(value + ':');
-        }
-      });
-
-      $('.hr').on('keydown', function(e) {
-        var value = $(this).val();
-        if (e.keyCode === 8 && value.length === 3 && value.charAt(2) === ':') {
-          e.preventDefault(); // Impede a ação padrão do backspace
-          $(this).val(value.slice(0, 2)); // Remove o ":"
-        }
-      });
-
-      $('#formMarcacaoModal').on('shown.bs.modal', function () {
-        document.querySelector("#nomeFuncionarioMarc").innerHTML += document.querySelector('#funcionarios').value;  
-      });
-
-      //
-
-      $('#btn-cancelar-marcacao').click(function(e) {
-            document.querySelector("#nomeFuncionarioMarc").innerHTML = "Funcionário: ";
-      });
 
       //Handlebars
+
+      carregarTelaFuncionarios();
 
       function abrirECompilarTemplate(caminho, callback){
         $.ajax({
@@ -76,12 +41,7 @@ $(document).ready(function() {
       }
 
       $('#funcionario-btn').click(function(){
-        abrirECompilarTemplate("/assets/templates/funcionarios-template.hbs", function(templateCompilado) {
-            var dadosTabelaFuncionario = [
-                // Dados da Tabela aqui
-            ];
-            atualizarTabela("funcionario", templateCompilado, dadosTabelaFuncionario);
-        });
+          carregarTelaFuncionarios();
       })
 
         $('#marcacoes-btn').click(function() {
@@ -112,35 +72,13 @@ $(document).ready(function() {
             });
         });
 
-function prevenirRolagemPraCima(e){
-    e.preventDefault(); 
-    e.stopPropagation(); 
-}
-
-function processarTituloModal(elemento, modal){
-    console.log(elemento)
-    console.log(modal)
-    let classes = elemento.className.split(" ");
-    console.log("classes = "+classes);
-    console.log("modal = "+modal);
-    var tituloValor = null;
-
-    classes.forEach(function(classe){
-        var titulo = titulosModais.find(function(titulo){
-            return classe === titulo.chave;
-        })
-
-        if(titulo){
-            tituloValor = titulo.valor;
+        function carregarTelaFuncionarios(){
+            abrirECompilarTemplate("/assets/templates/funcionarios-template.hbs", function(templateCompilado) {
+                var dadosTabelaFuncionario = [
+                    // Dados da Tabela aqui
+                ];
+                atualizarTabela("funcionario", templateCompilado, dadosTabelaFuncionario);
+            });
         }
-    });
-
-    console.log(document.querySelector(modal));
-    
-    if(tituloValor){
-        document.querySelector(modal + ' .modal-title').innerHTML = tituloValor;
-    }
-    
-}
 
 });
