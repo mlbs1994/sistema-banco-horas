@@ -1,0 +1,133 @@
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 200vh auto;
+    grid-gap: 2px;
+}
+
+.cabecalho{
+    grid-area: header;
+    background-color: #015A81;
+    height: 100px;
+}
+
+.menu-lateral{
+    grid-area: aside;
+    background-color: #3F51B5;
+    width: 30vh;
+    padding-top: 1vh;
+}
+
+.botao-menu-lateral{
+    display: grid;
+    grid-template-areas: 
+    "btn-img btn-txt";
+    grid-gap: 1vh;
+    width: 5vh;
+    margin-top: 5vh;
+}
+
+.img-btn-menu-lateral{
+    grid-area: btn-img;
+    height: 5vh;
+    margin-left: 1vh;
+}
+
+.text-btn-menu-lateral{
+    grid-area: btn-txt;
+    width: 15vh;
+    color: #FFFFFF;
+    font-size: 12pt;
+    margin-top: 1vh;
+}
+
+.principal{
+    grid-area: main;
+    background-color: #FFFFFF;
+    padding: 20px 20px 80px 20px;
+    height: auto;
+}
+
+.rodape{
+    grid-area: footer;
+    background-color: #015A81;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.rodape a{
+    color: #FFFFFF;
+}
+
+.header-logo{
+    display: grid;
+    width: 38vh;
+    grid-template-areas: 
+    "img-logo img-name";
+    grid-gap: 2vh;
+    
+}
+
+.img-logo{
+    grid-area: img-logo;
+    max-width: 100%; /* Define a largura máxima como 100% do contêiner pai */
+    height: auto; /* Mantém a proporção original da imagem */
+    display: block; /* Remove espaços em branco abaixo da imagem */
+    margin: 1vh 1vh 1vh 1vh;
+}
+
+.img-name{
+    grid-area: img-name;
+    font-size: large;
+    margin-top: 4vh;
+    color: #FFFFFF;
+}
+
+.table-container{
+    margin-bottom: 5vh;
+}
+
+.table-title{
+    display: grid;
+    grid-template-areas: 
+    "tb-title tb-title tb-title tb-action-btn";
+    background: #015A81;
+    color: #FFFFFF;
+    height: 10vh;
+    padding: 2vh;
+}
+
+.table-title h4{
+    grid-area: tb-title;
+    margin-left: 2vh;
+}
+
+.table-title button{
+    grid-area: tb-action-btn;
+    color: #FFFFFF;
+    background-color: #3F51B5;
+    font-weight: bold;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.funcionario-marc-grid{
+    margin: 2vh auto 2vh 2vh;
+}
+
+.edit{
+    color: orange;
+}
+
+.delete{
+    color: red;
+}
+
+select{
+    width: 150vh;
+}
