@@ -53,6 +53,7 @@ body{
     background-color: #FFFFFF;
     padding: 20px 20px 0px 20px;
     height: auto;
+    min-height: 100vh;
 }
 
 .rodape{
@@ -90,6 +91,7 @@ body{
     margin-top: 4vh;
     color: #FFFFFF;
 }
+
 
 .table-container{
     margin-bottom: 5vh;
@@ -171,4 +173,8 @@ button{
 
 .funcionariosMarc{
     height: 20vh;
+}
+
+.prev, .next{
+    background: #3F51B5;
 }
