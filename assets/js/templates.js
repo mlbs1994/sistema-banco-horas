@@ -10,6 +10,14 @@ $(document).ready(function () {
     $(targetModal).modal("show");
   });
 
+  $('#salvarAlterarFuncBtn').click(function (event){
+    console.log("Botão Salvar Funcionario "+modoCRUD);
+  });
+
+  $('#salvarAlterarMarcBtn').click(function (event){
+    console.log("Botão Salvar Marcação "+modoCRUD);
+  });
+
   $(".closeModalButton").click(function (e) {
     limparFormularios();
     prevenirRolagemPraCima(e);
