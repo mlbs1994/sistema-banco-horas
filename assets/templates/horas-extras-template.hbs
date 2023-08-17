@@ -18,7 +18,7 @@
                 <th scope="col">Data</th>
                 <th scope="col">Horário Inicio</th>
                 <th scope="col">Horário Fim</th>
-                <th scope="col">Ações</th>
+                <th scope="col">Horas Extras</th>
             </tr>
         </thead>
         <tbody id="tab-horas-extras-body">
@@ -28,10 +28,7 @@
                 <td>{{data-marcacao-hora-extra}}</td>
                 <td>{{horario-inicio-hora-extra}}</td>
                 <td>{{horario-fim-hora-extra}}</td>
-                <td>
-                    <a class="modalButton edit-func" href="#" data-target="#formFuncionarioModal"><span class="material-icons edit">edit</span></a>
-                    <a class="modalButton del-func" href="#" data-target="#exclusaoModal"><span class="material-icons delete">delete</span></a>
-                </td>
+                <td>{{hora-extra}}</td>
             </tr>
             {{/each}}
         </tbody>

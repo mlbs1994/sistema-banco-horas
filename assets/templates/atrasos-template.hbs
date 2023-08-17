@@ -18,7 +18,7 @@
                 <th scope="col">Data</th>
                 <th scope="col">Horário Inicio</th>
                 <th scope="col">Horário Fim</th>
-                <th scope="col">Ações</th>
+                <th scope="col">Atraso</th>
             </tr>
         </thead>
         <tbody id="tab-atrasos-body">
@@ -28,10 +28,7 @@
                 <td>{{data-marcacao-atraso}}</td>
                 <td>{{horario-inicio-atraso}}</td>
                 <td>{{horario-fim-atraso}}</td>
-                <td>
-                    <a class="modalButton edit-func" href="#" data-target="#formFuncionarioModal"><span class="material-icons edit">edit</span></a>
-                    <a class="modalButton del-func" href="#" data-target="#exclusaoModal"><span class="material-icons delete">delete</span></a>
-                </td>
+                <td>{{atraso}}</td>
             </tr>
             {{/each}}
         </tbody>
