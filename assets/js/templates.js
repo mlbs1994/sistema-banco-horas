@@ -1,13 +1,17 @@
+var modoCRUD = "";
+
 $(document).ready(function () {
-  $(".modalButton").click(function (e) {
-    console.log("cheguei");
-    prevenirRolagemPraCima(e);
+  $(".modalButton").click(function (event) {
+    var id = $(this).data("id");
+    prevenirRolagemPraCima(event);
     var targetModal = $(this).data("target");
     processarTituloModal($(this).get(0), targetModal);
+    processarCampos(targetModal, id, document.querySelector(targetModal));
     $(targetModal).modal("show");
   });
 
   $(".closeModalButton").click(function (e) {
+    limparFormularios();
     prevenirRolagemPraCima(e);
     $(".modal").modal("hide");
   });
@@ -27,10 +31,6 @@ $(document).ready(function () {
     }
   });
 
-  $("#formMarcacaoModal").on("shown.bs.modal", function () {
-    document.querySelector("#nomeFuncionarioMarc").innerHTML =
-      "Funcionario(a): " + document.querySelector("#funcionarios").value;
-  });
 
   //
 
@@ -39,7 +39,34 @@ $(document).ready(function () {
     console.log(document.querySelector("#nomeFuncionarioMarc"));
     document.querySelector("#nomeFuncionarioMarc").innerHTML = "Funcionário: ";
   });
+
+  $('#funcionarios').change(function(){
+     var funcionarioSelecionado = $(this).val();
+     var marcacoesFuncionario = null;
+     var btn = document.querySelector('button:not(.hidden)');
+     console.log("funcionario selecionado = "+funcionarioSelecionado)
+
+     if(funcionarioSelecionado === ""){
+        btn.disabled = true;
+        marcacoesFuncionario = $('.table tr');
+        marcacoesFuncionario.show();
+     } else {
+        btn.disabled = false;
+        $('.dados').hide();
+
+        marcacoesFuncionario =  $('.table tr[data-funcionario="' + funcionarioSelecionado + '"]');
+
+        document.querySelector('thead tr').display = '';
+        marcacoesFuncionario.show();
+     }
+     atualizarPaginacao(marcacoesFuncionario);
+  });
 });
+
+function limparFormularios(){
+    document.querySelector('#formFuncionario').reset();
+    document.querySelector('#formMarcacoes').reset();
+}
 
 function prevenirRolagemPraCima(e) {
   e.preventDefault();
@@ -69,4 +96,36 @@ function processarTituloModal(elemento, modal) {
   if (tituloValor) {
     document.querySelector(modal + " .modal-title").innerHTML = tituloValor;
   }
+
+  modoCRUD = tituloValor;
+}
+
+function processarCampos(elemento, id, modal)
+{
+  var campos = modal.querySelectorAll('input');
+  var colecao = funcionarios;
+  var obj = funcionarios[id];
+  if(!elemento.includes("Funcionario")){
+    colecao = marcacoes;
+    obj = marcacoes[id];
+  }
+  if(modoCRUD.includes("Editar")){
+    campos.forEach(function (input) {
+      var atributo = input.id
+      if(obj.hasOwnProperty(atributo)){
+        if(input.type === 'date'){
+          input.value = processarData(obj[atributo]);
+        } else {
+          input.value = obj[atributo]
+        }
+      }
+    });
+  } 
+}
+
+function processarData(dataStr){
+  var partesData = dataStr.split("/");
+  var data = partesData[2] + '-' + partesData[1] + '-' + partesData[0];
+  console.log("data = "+data);
+  return data;
 }

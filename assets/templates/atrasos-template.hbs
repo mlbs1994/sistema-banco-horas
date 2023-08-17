@@ -5,10 +5,10 @@
     <div class="funcionario-marc-grid">
         <label for="funcionarios">Funcionario</label>
         <select id="funcionarios" name="funcionarios" class="select2 custom-select" data-live-search="true">
-            <option value="Osvaldo Lima">Osvaldo Lima</option>
-            <option value="Ana Gusmão">Ana Gusmão</option>
-            <option value="Cintia Lopes">Cintia Lopes</option>
-            <option value="Ricardo Roberto">Ricardo Roberto</option>
+            <option value="">Todos</option>
+            {{#each dados.funcionarios}}
+             <option value="{{nome}}">{{nome}}</option>
+            {{/each}}
         </select>
     </div>
     <table class="table">
@@ -22,12 +22,12 @@
             </tr>
         </thead>
         <tbody id="tab-atrasos-body">
-            {{#each dados}}
-            <tr>
-                <td>{{funcionario-nome}}</td>
-                <td>{{data-marcacao}}</td>
-                <td>{{horario_inicio}}</td>
-                <td>{{horario_fim}}</td>
+            {{#each dados.registros}}
+            <tr class="dados" data-funcionario="{{funcionario-nome}}">
+                <td>{{funcionario-nome-atraso}}</td>
+                <td>{{data-marcacao-atraso}}</td>
+                <td>{{horario-inicio-atraso}}</td>
+                <td>{{horario-fim-atraso}}</td>
                 <td>
                     <a class="modalButton edit-func" href="#" data-target="#formFuncionarioModal"><span class="material-icons edit">edit</span></a>
                     <a class="modalButton del-func" href="#" data-target="#exclusaoModal"><span class="material-icons delete">delete</span></a>
@@ -39,3 +39,4 @@
 </div>
 <script src="/assets/js/templates.js"></script>
 <script src="/assets/js/templates-select2.js"></script>
+<script src="/assets/js/paginacao.js"></script>

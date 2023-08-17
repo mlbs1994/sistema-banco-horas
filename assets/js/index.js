@@ -14,7 +14,16 @@ const titulosModais = [
     {
         "chave": "edit-marc",
         "valor": "Editar Marcação"
-    }
+    },
+    {
+        "chave": "del-func",
+        "valor": "Deletar Funcionário"
+    },
+    {
+        "chave": "del-marc",
+        "valor": "Deletar Marcação"
+    },
+
 ];
 
 var funcionarios = [
@@ -25,49 +34,69 @@ var funcionarios = [
 ];
 
 var marcacoes = [
-    {"funcionario-nome": "Osvaldo Lima", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Osvaldo Lima", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Osvaldo Lima", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ana Gusmão", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ana Gusmão", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ana Gusmão", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Cintia Lopes", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Cintia Lopes", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Cintia Lopes", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ricardo Roberto", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ricardo Roberto", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ricardo Roberto", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ricardo Roberto", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ricardo Roberto", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ricardo Roberto", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"}];
+    {"funcionario-nome": "Osvaldo Lima da Costa", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Osvaldo Lima da Costa", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Osvaldo Lima da Costa", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "09:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ana Gusmão da Silva", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ana Gusmão da Silva", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ana Gusmão da Silva", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Cintia Lopes Vanderbilt", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Cintia Lopes Vanderbilt", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Cintia Lopes Vanderbilt", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "09:00", "horario_fim_marcacao": "18:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "19:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "07:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "10:00", "horario_fim_marcacao": "19:00"},
+    {"funcionario-nome": "Ricardo Roberto Royce", "data-marcacao": "01/07/2023", "horario_inicio_marcacao": "08:00", "horario_fim_marcacao": "17:00"}];
 
 var atrasos = [
-    {"funcionario-nome": "Osvaldo Lima", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Osvaldo Lima", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Osvaldo Lima", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ana Gusmão", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ana Gusmão", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ana Gusmão", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Cintia Lopes", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Cintia Lopes", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Cintia Lopes", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ricardo Roberto", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ricardo Roberto", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ricardo Roberto", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"}];
+    {"funcionario-nome-atraso": "Osvaldo Lima da Costa", "data-marcacao-atraso": "01/07/2023", "horario-inicio-atraso": "08:00", "horario-fim-atraso": "17:00"},
+    {"funcionario-nome-atraso": "Osvaldo Lima da Costa", "data-marcacao-atraso": "01/07/2023", "horario-inicio-atraso": "08:00", "horario-fim-atraso": "17:00"},
+    {"funcionario-nome-atraso": "Osvaldo Lima da Costa", "data-marcacao-atraso": "01/07/2023", "horario-inicio-atraso": "08:00", "horario-fim-atraso": "17:00"},
+    {"funcionario-nome-atraso": "Ana Gusmão da Silva", "data-marcacao-atraso": "01/07/2023", "horario-inicio-atraso": "08:00", "horario-fim-atraso": "17:00"},
+    {"funcionario-nome-atraso": "Ana Gusmão da Silva", "data-marcacao-atraso": "01/07/2023", "horario-inicio-atraso": "08:00", "horario-fim-atraso": "17:00"},
+    {"funcionario-nome-atraso": "Ana Gusmão da Silva", "data-marcacao-atraso": "01/07/2023", "horario-inicio-atraso": "08:00", "horario-fim-atraso": "17:00"},
+    {"funcionario-nome-atraso": "Cintia Lopes Vanderbilt", "data-marcacao-atraso": "01/07/2023", "horario-inicio-atraso": "08:00", "horario-fim-atraso": "17:00"},
+    {"funcionario-nome-atraso": "Cintia Lopes Vanderbilt", "data-marcacao-atraso": "01/07/2023", "horario-inicio-atraso": "08:00", "horario-fim-atraso": "17:00"},
+    {"funcionario-nome-atraso": "Cintia Lopes Vanderbilt", "data-marcacao-atraso": "01/07/2023", "horario-inicio-atraso": "08:00", "horario-fim-atraso": "17:00"},
+    {"funcionario-nome-atraso": "Ricardo Roberto Royce", "data-marcacao-atraso": "01/07/2023", "horario-inicio-atraso": "08:00", "horario-fim-atraso": "17:00"},
+    {"funcionario-nome-atraso": "Ricardo Roberto Royce", "data-marcacao-atraso": "01/07/2023", "horario-inicio-atraso": "08:00", "horario-fim-atraso": "17:00"},
+    {"funcionario-nome-atraso": "Ricardo Roberto Royce", "data-marcacao-atraso": "01/07/2023", "horario-inicio-atraso": "08:00", "horario-fim-atraso": "17:00"}];
 
 var horasExtras = [
-    {"funcionario-nome": "Osvaldo Lima", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Osvaldo Lima", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Osvaldo Lima", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ana Gusmão", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ana Gusmão", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ana Gusmão", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Cintia Lopes", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Cintia Lopes", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Cintia Lopes", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ricardo Roberto", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ricardo Roberto", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"},
-    {"funcionario-nome": "Ricardo Roberto", "data-marcacao": "01/07/2023", "horario_inicio": "08:00", "horario_fim": "17:00"}];
+    {"funcionario-nome-hora-extra": "Osvaldo Lima da Costa", "data-marcacao-hora-extra": "01/07/2023", "horario-inicio-hora-extra": "08:00", "horario-fim-hora-extra": "17:00"},
+    {"funcionario-nome-hora-extra": "Osvaldo Lima da Costa", "data-marcacao-hora-extra": "01/07/2023", "horario-inicio-hora-extra": "08:00", "horario-fim-hora-extra": "17:00"},
+    {"funcionario-nome-hora-extra": "Osvaldo Lima da Costa", "data-marcacao-hora-extra": "01/07/2023", "horario-inicio-hora-extra": "08:00", "horario-fim-hora-extra": "17:00"},
+    {"funcionario-nome-hora-extra": "Ana Gusmão da Silva", "data-marcacao-hora-extra": "01/07/2023", "horario-inicio-hora-extra": "08:00", "horario-fim-hora-extra": "17:00"},
+    {"funcionario-nome-hora-extra": "Ana Gusmão da Silva", "data-marcacao-hora-extra": "01/07/2023", "horario-inicio-hora-extra": "08:00", "horario-fim-hora-extra": "17:00"},
+    {"funcionario-nome-hora-extra": "Ana Gusmão da Silva", "data-marcacao-hora-extra": "01/07/2023", "horario-inicio-hora-extra": "08:00", "horario-fim-hora-extra": "17:00"},
+    {"funcionario-nome-hora-extra": "Cintia Lopes Vanderbilt", "data-marcacao-hora-extra": "01/07/2023", "horario-inicio-hora-extra": "08:00", "horario-fim-hora-extra": "17:00"},
+    {"funcionario-nome-hora-extra": "Cintia Lopes Vanderbilt", "data-marcacao-hora-extra": "01/07/2023", "horario-inicio-hora-extra": "08:00", "horario-fim-hora-extra": "17:00"},
+    {"funcionario-nome-hora-extra": "Cintia Lopes Vanderbilt", "data-marcacao-hora-extra": "01/07/2023", "horario-inicio-hora-extra": "08:00", "horario-fim-hora-extra": "17:00"},
+    {"funcionario-nome-hora-extra": "Ricardo Roberto Royce", "data-marcacao-hora-extra": "01/07/2023", "horario-inicio-hora-extra": "08:00", "horario-fim-hora-extra": "17:00"},
+    {"funcionario-nome-hora-extra": "Ricardo Roberto Royce", "data-marcacao-hora-extra": "01/07/2023", "horario-inicio-hora-extra": "08:00", "horario-fim-hora-extra": "17:00"},
+    {"funcionario-nome-hora-extra": "Ricardo Roberto Royce", "data-marcacao-hora-extra": "01/07/2023", "horario-inicio-hora-extra": "08:00", "horario-fim-hora-extra": "17:00"}];
 
 
 
@@ -91,6 +120,9 @@ $(document).ready(function() {
       }
 
       function atualizarTabela(opcaoID, templateCompilado, dados){
+        console.log("dados = "+dados);
+        console.log("marcacoes = "+dados.marcacoes);
+        console.log("funcionarios = "+dados.funcionarios);
         $("main-container").hide();
         $("#main-container").html(templateCompilado({dados})).show();
       }
@@ -101,7 +133,7 @@ $(document).ready(function() {
 
         $('#marcacoes-btn').click(function() {
             abrirECompilarTemplate("/assets/templates/marcacoes-template.hbs", function(templateCompilado) {
-                atualizarTabela("marcacoes", templateCompilado, marcacoes);
+                atualizarTabela("marcacoes", templateCompilado, construirDadosRegistros(marcacoes));
                 atualizarPaginacao();
             });
         })
@@ -109,14 +141,14 @@ $(document).ready(function() {
 
         $('#atrasos-btn').click(function() {
             abrirECompilarTemplate("/assets/templates/atrasos-template.hbs", function(templateCompilado) {
-                atualizarTabela("atrasos", templateCompilado, atrasos);
+                atualizarTabela("atrasos", templateCompilado, construirDadosRegistros(atrasos));
                 atualizarPaginacao();
             });
         })
 
         $('#horas-extras-btn').click(function() {
             abrirECompilarTemplate("/assets/templates/horas-extras-template.hbs", function(templateCompilado) {
-                atualizarTabela("horas-extras", templateCompilado, horasExtras);
+                atualizarTabela("horas-extras", templateCompilado, construirDadosRegistros(horasExtras));
                 atualizarPaginacao();
             });
         });
@@ -127,6 +159,10 @@ $(document).ready(function() {
                 atualizarTabela("funcionario", templateCompilado, funcionarios);
                 atualizarPaginacao();
             });
+        }
+
+        function construirDadosRegistros(dados){
+            return {"registros": dados, "funcionarios": funcionarios};
         }
 
         function atualizarPaginacao(){

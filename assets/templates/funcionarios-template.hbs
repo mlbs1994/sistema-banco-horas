@@ -20,8 +20,8 @@
                 <td>{{horario_inicio}}</td>
                 <td>{{horario_fim}}</td>
                 <td>
-                    <a class="modalButton edit-func" href="#" data-target="#formFuncionarioModal"><span class="material-icons edit">edit</span></a>
-                    <a class="modalButton del-func" href="#" data-target="#exclusaoModal"><span class="material-icons delete">delete</span></a>
+                    <a data-id="{{@index}}" class="modalButton edit-func" href="#" data-target="#formFuncionarioModal" ><span class="material-icons edit">edit</span></a>
+                    <a data-id="{{@index}}" class="modalButton del-func" href="#" data-target="#exclusaoModal" ><span class="material-icons delete">delete</span></a>
                 </td>
             </tr>
             {{/each}}
